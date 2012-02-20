@@ -15,6 +15,12 @@
 		9605674B14F2B23A00E07D5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605674A14F2B23A00E07D5A /* AppDelegate.m */; };
 		9605674E14F2B23A00E07D5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605674D14F2B23A00E07D5A /* ViewController.m */; };
 		9605675114F2B23A00E07D5A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9605674F14F2B23A00E07D5A /* ViewController.xib */; };
+		9605675914F2B26800E07D5A /* TWClearTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605675814F2B26800E07D5A /* TWClearTableViewController.m */; };
+		9605675C14F2B5EC00E07D5A /* TWClearTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605675B14F2B5EC00E07D5A /* TWClearTableViewCell.m */; };
+		9605676A14F2B87900E07D5A /* UIFont+FT.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605676314F2B87800E07D5A /* UIFont+FT.m */; };
+		9605676B14F2B87900E07D5A /* Color+FT.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605676514F2B87800E07D5A /* Color+FT.m */; };
+		9605676C14F2B87900E07D5A /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605676714F2B87900E07D5A /* Constant.m */; };
+		9605676D14F2B87900E07D5A /* UIView+FT.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605676914F2B87900E07D5A /* UIView+FT.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +28,27 @@
 		9605673A14F2B23A00E07D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9605673C14F2B23A00E07D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9605673E14F2B23A00E07D5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9605674214F2B23A00E07D5A /* TWClear-Info.plist */ = {isa = PBXFileReference; path = "TWClear-Info.plist"; sourceTree = "<group>"; };
+		9605674214F2B23A00E07D5A /* TWClear-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TWClear-Info.plist"; sourceTree = "<group>"; };
 		9605674414F2B23A00E07D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9605674614F2B23A00E07D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9605674814F2B23A00E07D5A /* TWClear-Prefix.pch */ = {isa = PBXFileReference; path = "TWClear-Prefix.pch"; sourceTree = "<group>"; };
-		9605674914F2B23A00E07D5A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		9605674814F2B23A00E07D5A /* TWClear-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TWClear-Prefix.pch"; sourceTree = "<group>"; };
+		9605674914F2B23A00E07D5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9605674A14F2B23A00E07D5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9605674C14F2B23A00E07D5A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		9605674C14F2B23A00E07D5A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9605674D14F2B23A00E07D5A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9605675014F2B23A00E07D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9605675714F2B26800E07D5A /* TWClearTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClearTableViewController.h; sourceTree = "<group>"; };
+		9605675814F2B26800E07D5A /* TWClearTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWClearTableViewController.m; sourceTree = "<group>"; };
+		9605675A14F2B5EC00E07D5A /* TWClearTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClearTableViewCell.h; sourceTree = "<group>"; };
+		9605675B14F2B5EC00E07D5A /* TWClearTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWClearTableViewCell.m; sourceTree = "<group>"; };
+		9605676214F2B87800E07D5A /* UIFont+FT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FT.h"; sourceTree = "<group>"; };
+		9605676314F2B87800E07D5A /* UIFont+FT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FT.m"; sourceTree = "<group>"; };
+		9605676414F2B87800E07D5A /* Color+FT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Color+FT.h"; sourceTree = "<group>"; };
+		9605676514F2B87800E07D5A /* Color+FT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Color+FT.m"; sourceTree = "<group>"; };
+		9605676614F2B87800E07D5A /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		9605676714F2B87900E07D5A /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		9605676814F2B87900E07D5A /* UIView+FT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FT.h"; sourceTree = "<group>"; };
+		9605676914F2B87900E07D5A /* UIView+FT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FT.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +68,18 @@
 		9605672B14F2B23A00E07D5A = {
 			isa = PBXGroup;
 			children = (
+				9605676214F2B87800E07D5A /* UIFont+FT.h */,
+				9605676314F2B87800E07D5A /* UIFont+FT.m */,
+				9605676414F2B87800E07D5A /* Color+FT.h */,
+				9605676514F2B87800E07D5A /* Color+FT.m */,
+				9605676614F2B87800E07D5A /* Constant.h */,
+				9605676714F2B87900E07D5A /* Constant.m */,
+				9605676814F2B87900E07D5A /* UIView+FT.h */,
+				9605676914F2B87900E07D5A /* UIView+FT.m */,
+				9605675A14F2B5EC00E07D5A /* TWClearTableViewCell.h */,
+				9605675B14F2B5EC00E07D5A /* TWClearTableViewCell.m */,
+				9605675714F2B26800E07D5A /* TWClearTableViewController.h */,
+				9605675814F2B26800E07D5A /* TWClearTableViewController.m */,
 				9605674014F2B23A00E07D5A /* TWClear */,
 				9605673914F2B23A00E07D5A /* Frameworks */,
 				9605673714F2B23A00E07D5A /* Products */,
@@ -164,6 +194,12 @@
 				9605674714F2B23A00E07D5A /* main.m in Sources */,
 				9605674B14F2B23A00E07D5A /* AppDelegate.m in Sources */,
 				9605674E14F2B23A00E07D5A /* ViewController.m in Sources */,
+				9605675914F2B26800E07D5A /* TWClearTableViewController.m in Sources */,
+				9605675C14F2B5EC00E07D5A /* TWClearTableViewCell.m in Sources */,
+				9605676A14F2B87900E07D5A /* UIFont+FT.m in Sources */,
+				9605676B14F2B87900E07D5A /* Color+FT.m in Sources */,
+				9605676C14F2B87900E07D5A /* Constant.m in Sources */,
+				9605676D14F2B87900E07D5A /* UIView+FT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
