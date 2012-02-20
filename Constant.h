@@ -30,6 +30,7 @@
 #define LOGRECT(a) DEBUG_LOG(@"Rect: %f %f %f %f", a.origin.x, a.origin.y, a.size.width, a.size.height)
 #define LOGFLOAT(a) DEBUG_LOG(@"Float: %f", a)
 #define LOGINT(a) NSLog(@"Int: %d", a)
+#define LOGPOINT(a) NSLog(@"x: %f\ny: %f", a.x, a.y)
 #define ISJSONNULL(a) [Constant isJsonNull: a]
 #define NSURLFROMSTRING(a) [NSURL URLWithString: a]
 

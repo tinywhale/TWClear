@@ -39,18 +39,30 @@
 }
 
 - (void) handlePinch: (UIPinchGestureRecognizer *) g {
-    
+    static CGPoint originalPoint;
     if (g.state == UIGestureRecognizerStateBegan) {
         NSLog(@"began");
+        originalPoint = [g locationInView: self.tableView];
     }
     else if (g.state == UIGestureRecognizerStateChanged) {
         if (g.scale < 1.0) {
             self.cellHeight = 60 * g.scale;
             [self.tableView reloadData];
+            self.tableView.height = 480 * g.scale;
         }
+        CGPoint tmpPoint = [g locationInView: self.tableView];
+        CGFloat distanceY = tmpPoint.y - originalPoint.y;
+        LOGFLOAT(distanceY);
+        self.tableView.centerY = 240;
+        
     }
     else if (g.state == UIGestureRecognizerStateEnded) {
+        self.cellHeight = 60;
+        [UIView animateWithDuration:2 animations:^{
+            self.tableView.frame = CGRectMake(0, 0, 320, 480);
+        }];
         
+        [self.tableView reloadData];
     }
 }
 
