@@ -43,9 +43,9 @@
     static CGPoint originalTopPoint;
     if (g.state == UIGestureRecognizerStateBegan) {
         if (g.numberOfTouches == 2) {
-            originalPoint = [g locationInView: self.view.superview];
-            CGPoint point1 = [g locationOfTouch: 0 inView: self.view.superview];
-            CGPoint point2 = [g locationOfTouch:1 inView:self.view.superview];
+            originalPoint = [g locationInView: nil];
+            CGPoint point1 = [g locationOfTouch: 0 inView: nil];
+            CGPoint point2 = [g locationOfTouch:1 inView:nil];
             originalTopPoint = (point1.y > point2.y) ? point2 : point1;
          //   LOGPOINT(originalTopPoint);
         }
@@ -53,8 +53,8 @@
     }
     else if (g.state == UIGestureRecognizerStateChanged) {
         if (g.numberOfTouches == 2) {
-            CGPoint point1 = [g locationOfTouch: 0 inView: self.view.superview];
-            CGPoint point2 = [g locationOfTouch:1 inView:self.view.superview];
+            CGPoint point1 = [g locationOfTouch: 0 inView: nil];
+            CGPoint point2 = [g locationOfTouch:1 inView:nil];
             CGPoint tmpTopPoint = (point1.y > point2.y) ? point2 : point1;
             if (g.scale < 1.0) {
                 CGFloat realScale = g.scale * 2 - 1;
@@ -65,9 +65,9 @@
                 [self.tableView reloadData];
                 self.tableView.height = 60 + 60 * realScale * 7;
             }
-            CGPoint tmpPoint = [g locationInView: self.view.superview];
-            CGFloat distanceY = tmpTopPoint.y - originalTopPoint.y;
-            self.tableView.centerY = 240 + distanceY/2;
+            CGPoint tmpPoint = [g locationInView: nil];
+            CGFloat distanceY = tmpPoint.y - originalPoint.y;
+            self.tableView.centerY = 240 + distanceY;
 //            LOGFLOAT(distanceY);
         }
         

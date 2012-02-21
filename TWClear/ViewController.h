@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TWClearViewController.h"
+#import "TWClearTableViewController.h"
 @interface ViewController : UIViewController {
     @private
-    TWClearViewController *TW_viewController;
+    TWClearTableViewController *TW_tableViewController;
 }
 
-@property (strong) TWClearViewController *viewController;
+@property (strong) TWClearTableViewController *tableViewController;
 
 @end
