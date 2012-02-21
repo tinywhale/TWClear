@@ -21,6 +21,7 @@
 		9605676B14F2B87900E07D5A /* Color+FT.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605676514F2B87800E07D5A /* Color+FT.m */; };
 		9605676C14F2B87900E07D5A /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605676714F2B87900E07D5A /* Constant.m */; };
 		9605676D14F2B87900E07D5A /* UIView+FT.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605676914F2B87900E07D5A /* UIView+FT.m */; };
+		9611923F14F3A7D900A1A55A /* TWClearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9611923E14F3A7D900A1A55A /* TWClearViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		9605676714F2B87900E07D5A /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		9605676814F2B87900E07D5A /* UIView+FT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FT.h"; sourceTree = "<group>"; };
 		9605676914F2B87900E07D5A /* UIView+FT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FT.m"; sourceTree = "<group>"; };
+		9611923D14F3A7D900A1A55A /* TWClearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWClearViewController.h; sourceTree = "<group>"; };
+		9611923E14F3A7D900A1A55A /* TWClearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWClearViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 		9605672B14F2B23A00E07D5A = {
 			isa = PBXGroup;
 			children = (
+				9611923D14F3A7D900A1A55A /* TWClearViewController.h */,
+				9611923E14F3A7D900A1A55A /* TWClearViewController.m */,
 				9605676214F2B87800E07D5A /* UIFont+FT.h */,
 				9605676314F2B87800E07D5A /* UIFont+FT.m */,
 				9605676414F2B87800E07D5A /* Color+FT.h */,
@@ -200,6 +205,7 @@
 				9605676B14F2B87900E07D5A /* Color+FT.m in Sources */,
 				9605676C14F2B87900E07D5A /* Constant.m in Sources */,
 				9605676D14F2B87900E07D5A /* UIView+FT.m in Sources */,
+				9611923F14F3A7D900A1A55A /* TWClearViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +317,7 @@
 				9605675614F2B23A00E07D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

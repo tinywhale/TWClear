@@ -32,6 +32,8 @@
     [label setFont:[UIFont fontWithName: @"Helvetica-Bold" size:18.0]];
     label.text = [NSString stringWithFormat: @"Row %d", indexPath.row];
     [self.contentView addSubview: label];
+    [self.contentView setBackgroundColor: [UIColor redColor]];
+    [label setBackgroundColor: [UIColor redColor]];
 }
 
 @end

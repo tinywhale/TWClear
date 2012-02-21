@@ -13,15 +13,14 @@
 @end
 
 @implementation ViewController
-@synthesize tableViewController = TW_tableViewController;
+@synthesize viewController = TW_viewController;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableViewController = [[TWClearTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    
-    self.tableViewController.view.frame = self.view.frame;
-    [self.view addSubview: self.tableViewController.view];
+    self.viewController = [[TWClearViewController  alloc] init];
+    self.viewController.view.frame = self.view.frame;
+    [self.view addSubview: self.viewController.view];
     
     
 	// Do any additional setup after loading the view, typically from a nib.
