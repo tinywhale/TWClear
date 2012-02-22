@@ -68,7 +68,6 @@
             CGPoint tmpPoint = [g locationInView: nil];
             CGFloat distanceY = tmpPoint.y - originalPoint.y;
             self.tableView.centerY = 240 + distanceY;
-//            LOGFLOAT(distanceY);
         }
         
     }
@@ -119,6 +118,8 @@
     //cell.textLabel.text = [NSString stringWithFormat: @"Row %d", indexPath.row];
     // Configure the cell...
     [cell configureCellAtIndexPath: indexPath];
+    
+    //cell.layer.shouldRasterize = YES;
     return cell;
 }
 

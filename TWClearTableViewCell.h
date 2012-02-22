@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Constant.h"
-@interface TWClearTableViewCell : UITableViewCell
+@interface TWClearTableViewCell : UITableViewCell {
+    UILabel *TW_label;
+}
+
+@property (strong) UILabel *label;
 
 
 - (void) configureCellAtIndexPath: (NSIndexPath *) indexPath;

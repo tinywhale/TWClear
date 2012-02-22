@@ -9,12 +9,18 @@
 #import "TWClearTableViewCell.h"
 
 @implementation TWClearTableViewCell
+@synthesize label  = TW_label;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.label = [[UILabel alloc] initWithFrame: CGRectMake(0, 20, self.contentView.width, self.contentView.height - 20)];
+        self.label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+        [self.label setFont:[UIFont fontWithName: @"Helvetica-Bold" size:18.0]];
+        [self.contentView addSubview: self.label];
+        [self.contentView setBackgroundColor: [UIColor redColor]];
+        [self.label setBackgroundColor: [UIColor redColor]];
     }
     return self;
 }
@@ -27,13 +33,8 @@
 }
 
 - (void) configureCellAtIndexPath: (NSIndexPath *) indexPath {
-    UILabel *label = [[UILabel alloc] initWithFrame: CGRectMake(0, 20, self.contentView.width, self.contentView.height - 20)];
-    label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    [label setFont:[UIFont fontWithName: @"Helvetica-Bold" size:18.0]];
-    label.text = [NSString stringWithFormat: @"Row %d", indexPath.row];
-    [self.contentView addSubview: label];
-    [self.contentView setBackgroundColor: [UIColor redColor]];
-    [label setBackgroundColor: [UIColor redColor]];
+    
+    self.label.text = [NSString stringWithFormat: @"Row %d", indexPath.row];
 }
 
 @end
