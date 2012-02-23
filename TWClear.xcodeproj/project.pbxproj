@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9601C23B14F51DF3000B272A /* TWLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601C23A14F51DF3000B272A /* TWLabel.m */; };
 		9605673B14F2B23A00E07D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9605673A14F2B23A00E07D5A /* UIKit.framework */; };
 		9605673D14F2B23A00E07D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9605673C14F2B23A00E07D5A /* Foundation.framework */; };
 		9605673F14F2B23A00E07D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9605673E14F2B23A00E07D5A /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9601C23914F51DF3000B272A /* TWLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWLabel.h; sourceTree = "<group>"; };
+		9601C23A14F51DF3000B272A /* TWLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWLabel.m; sourceTree = "<group>"; };
 		9605673614F2B23A00E07D5A /* TWClear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWClear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9605673A14F2B23A00E07D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9605673C14F2B23A00E07D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +71,8 @@
 		9605672B14F2B23A00E07D5A = {
 			isa = PBXGroup;
 			children = (
+				9601C23914F51DF3000B272A /* TWLabel.h */,
+				9601C23A14F51DF3000B272A /* TWLabel.m */,
 				9605676214F2B87800E07D5A /* UIFont+FT.h */,
 				9605676314F2B87800E07D5A /* UIFont+FT.m */,
 				9605676414F2B87800E07D5A /* Color+FT.h */,
@@ -200,6 +205,7 @@
 				9605676B14F2B87900E07D5A /* Color+FT.m in Sources */,
 				9605676C14F2B87900E07D5A /* Constant.m in Sources */,
 				9605676D14F2B87900E07D5A /* UIView+FT.m in Sources */,
+				9601C23B14F51DF3000B272A /* TWLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

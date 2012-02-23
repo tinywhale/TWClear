@@ -13,7 +13,7 @@
 @end
 
 @implementation TWClearTableViewController
-@synthesize cellHeight = TW_cellHeight;
+@synthesize cellHeight = TW_cellHeight, cells = TW_cells;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,6 +30,7 @@
     [super viewDidLoad];
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
     [self.tableView addGestureRecognizer: pinch];
+    self.cells = [NSMutableDictionary dictionary];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -39,35 +40,23 @@
 }
 
 - (void) handlePinch: (UIPinchGestureRecognizer *) g {
-    static CGPoint originalPoint;
-    static CGPoint originalTopPoint;
     if (g.state == UIGestureRecognizerStateBegan) {
         if (g.numberOfTouches == 2) {
-            originalPoint = [g locationInView: nil];
-            CGPoint point1 = [g locationOfTouch: 0 inView: nil];
-            CGPoint point2 = [g locationOfTouch:1 inView:nil];
-            originalTopPoint = (point1.y > point2.y) ? point2 : point1;
-         //   LOGPOINT(originalTopPoint);
         }
-        
     }
     else if (g.state == UIGestureRecognizerStateChanged) {
         if (g.numberOfTouches == 2) {
-            CGPoint point1 = [g locationOfTouch: 0 inView: nil];
-            CGPoint point2 = [g locationOfTouch:1 inView:nil];
-            CGPoint tmpTopPoint = (point1.y > point2.y) ? point2 : point1;
             if (g.scale < 1.0) {
                 CGFloat realScale = g.scale * 2 - 1;
                 if (realScale < 0.0) {
                     realScale = 0;
                 }
-                self.cellHeight = 60 * realScale;
+                self.cellHeight = floor(60 * realScale);
+                self.tableView.height = floor(60 + 60 * realScale * 7);
+                
                 [self.tableView reloadData];
-                self.tableView.height = 60 + 60 * realScale * 7;
-            }
-            CGPoint tmpPoint = [g locationInView: nil];
-            CGFloat distanceY = tmpPoint.y - originalPoint.y;
-            self.tableView.centerY = 240 + distanceY;
+            }   
+            self.tableView.centerY = 240;
         }
         
     }
@@ -108,11 +97,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    NSString *cellId = [NSString stringWithFormat: @"id_%d_%d", indexPath.section, indexPath.row];
+    
+    TWClearTableViewCell *cell = [self.cells objectForKey: cellId];
+    
+    
+    if (cell == nil) {
+        cell = [[TWClearTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:  @"test"];
+        [self.cells setValue: cell forKey: cellId];
+    }
+    
+    [cell configureCellAtIndexPath: indexPath];
+    /*
     static NSString *CellIdentifier = @"Cell";
     TWClearTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[TWClearTableViewCell alloc] init];
+        cell = [[TWClearTableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: CellIdentifier];
     }
     
     //cell.textLabel.text = [NSString stringWithFormat: @"Row %d", indexPath.row];
@@ -120,6 +122,9 @@
     [cell configureCellAtIndexPath: indexPath];
     
     //cell.layer.shouldRasterize = YES;
+    return cell;
+     */
+    
     return cell;
 }
 

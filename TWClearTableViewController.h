@@ -11,8 +11,10 @@
 @interface TWClearTableViewController : UITableViewController {
     @private
     CGFloat TW_cellHeight;
+    NSMutableDictionary *TW_cells;
 }
 
 @property CGFloat cellHeight;
+@property (strong) NSMutableDictionary *cells;
 
 @end
